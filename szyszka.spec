@@ -3,9 +3,6 @@
 
 %global uuid com.github.qarmin.szyszka
 %global pkgname szyszka
-%global guiapp gui
-%global orbapp orbtk
-%global cliapp cli
 
 # Do not upgrade without testing!
 # Looks like compiling with system provided rust packages is not posible at this time. 
@@ -13,8 +10,8 @@
 # "error: no matching package named `audiotags` found
 # location searched: registry `https://github.com/rust-lang/crates.io-index`"
 # For some reason this crates can't be found. So as workaround, we can create own vendor pack.
-# Download czkawka .tar.gz source, unpack it, cd and install 'dnf install cargo-vendor'
-# Then inside czkawka dir (or any other cargo/rust project) run in terminal command: 'cargo vendor'
+# Download szyszka .tar.gz source, unpack it, cd and install 'dnf install cargo-vendor'
+# Then inside szyszka dir (or any other cargo/rust project) run in terminal command: 'cargo vendor'
 # This create new dir called vendor and download here all needed crates dependencies.
 # When process finish, compress it as vendor.tar.xz and upload to file-store. Place here as Source1.
 
@@ -23,7 +20,7 @@ Name:		szyszka
 Version:	2.0.0
 Release:	1
 License:	MIT
-URL:		https://github.com/qarmin/czkawka
+URL:		https://github.com/qarmin/szyszka
 Source0:	https://github.com/qarmin/szyszka/archive/%{version}/%{name}-%{version}.tar.gz
 Source1:	vendor.tar.xz
 
