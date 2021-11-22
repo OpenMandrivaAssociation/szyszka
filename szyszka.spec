@@ -77,15 +77,19 @@ cargo build --release
 # Cargo install is broken. For some reason it not intall any files.
 #cargo_install
 mkdir -p %{buildroot}%{_bindir}/
-install -Dm755 ./target/release/%{pkgname}_%{guiapp} %{buildroot}%{_bindir}
-
-ln -s %{_bindir}%{pkgname}_%{cliapp} %{buildroot}%{_bindir}/%{pkgname}
-
-install -Dm644 ./data/icons/com.github.qarmin.czkawka.svg -t %{buildroot}%{_datadir}/icons/hicolor/scalable/apps/
-install -Dm644 ./pkgs/com.github.qarmin.czkawka.desktop -t %{buildroot}%{_datadir}/applications/
-install -Dm644 ./data/com.github.qarmin.czkawka.metainfo.xml -t %{buildroot}%{_datadir}/metainfo
+install -Dm755 ./target/release/szyszka -t %{buildroot}%{_bindir}
+install -Dm644 ./data/icons/com.github.qarmin.szyszka.svg -t %{buildroot}%{_datadir}/icons/hicolor/scalable/apps/
+install -Dm644 ./pkgs/com.github.qarmin.szyszka.desktop -t %{buildroot}%{_datadir}/applications/
+install -Dm644 ./data/com.github.qarmin.szyszka.metainfo.xml -t %{buildroot}%{_datadir}/metainfo
 
 %if %{with check}
 %check
 %cargo_test
 %endif
+
+%files
+%license LICENSE
+%{_bindir}/%{pkgname}
+%{_datadir}/applications/com.github.qarmin.szyszka.desktop
+%{_iconsdir}/hicolor/scalable/apps/com.github.qarmin.szyszka.svg
+%{_datadir}/metainfo/com.github.qarmin.szyszka.metainfo.xml
