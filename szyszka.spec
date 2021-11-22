@@ -79,7 +79,7 @@ cargo build --release
 mkdir -p %{buildroot}%{_bindir}/
 install -Dm755 ./target/release/szyszka -t %{buildroot}%{_bindir}
 install -Dm644 ./data/icons/com.github.qarmin.szyszka.svg -t %{buildroot}%{_datadir}/icons/hicolor/scalable/apps/
-install -Dm644 ./pkgs/com.github.qarmin.szyszka.desktop -t %{buildroot}%{_datadir}/applications/
+install -Dm644 ./data/com.github.qarmin.szyszka.desktop -t %{buildroot}%{_datadir}/applications/
 install -Dm644 ./data/com.github.qarmin.szyszka.metainfo.xml -t %{buildroot}%{_datadir}/metainfo
 
 %if %{with check}
