@@ -18,7 +18,7 @@
 Summary:	Szyszka is fast and powerful file renamer
 Name:		szyszka
 Version:	2.0.0
-Release:	1
+Release:	2
 License:	MIT
 URL:		https://github.com/qarmin/szyszka
 Source0:	https://github.com/qarmin/szyszka/archive/%{version}/%{name}-%{version}.tar.gz
