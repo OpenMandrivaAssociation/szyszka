@@ -17,8 +17,8 @@
 
 Summary:	Szyszka is fast and powerful file renamer
 Name:		szyszka
-Version:	2.0.0
-Release:	2
+Version:	3.0.0
+Release:	1
 License:	MIT
 URL:		https://github.com/qarmin/szyszka
 Source0:	https://github.com/qarmin/szyszka/archive/%{version}/%{name}-%{version}.tar.gz
@@ -36,7 +36,7 @@ BuildRequires:	pkgconfig(atk)
 BuildRequires:	pkgconfig(cairo)
 BuildRequires:	pkgconfig(pango)
 BuildRequires:	pkgconfig(gdk-pixbuf-2.0)
-BuildRequires:	pkgconfig(gdk-3.0) >= 3.22
+BuildRequires:	pkgconfig(gtk4)
 BuildRequires:	hicolor-icon-theme
 
 %global srcroot %{_sourcedir}/%{pkgname}-%{version}
